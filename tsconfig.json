@@ -26,6 +26,12 @@
       "@/styles/*": [
         "styles/*"
       ],
+      "@/types/*": [
+        "types/*"
+      ],
+      "@/routes/*": [
+        "routes/*"
+      ],
     }
   },
   "include": [

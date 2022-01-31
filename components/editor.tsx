@@ -7,12 +7,10 @@ type Props = {
 
 export default function Editor({ }: Props): ReactElement {
     return (
-        <div>
-            <TextField
-                multiline={true}
-                rows={50}
-                fullWidth={true}
-            />
-        </div>
+        <TextField
+            multiline={true}
+            rows={50}
+            fullWidth={true}
+        />
     )
 }

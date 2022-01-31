@@ -4,10 +4,19 @@
   margin-top: 20px;
 }
 
-.editor-container {
-  width: 40%;
+.column {
+  background: blue;
+  height: 100vh;
 }
 
-/* .sidebar-container {
-  width: 
+/* .editor-container {
+  width: 30%;
 } */
+
+.right-sidebar {
+  background: green;
+}
+
+.left-sidebar {
+  background: red;
+} 

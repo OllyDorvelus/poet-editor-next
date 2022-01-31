@@ -24,17 +24,35 @@ const Home = (props: {}) => {
   return (
     <>
       <section className={styles.container}>
-        <div className={styles['left-sidebar']}>
-          <Sidebar anchor="left" />
+
+        <div class={styles.column}>
+          <Sidebar anchor="left">
+            <div className={`${styles['left-sidebar']}`}>
+              <ul>
+                <li>Example 1</li>
+                <li>Example 2</li>
+                <li>Example 3</li>
+                <li>Example 4</li>
+              </ul>
+            </div>
+          </Sidebar>
         </div>
-        <div className={styles['editor-container']}>
-          <Editor />
+
+        <div className={styles.column}>
+          <div className={`${styles['editor-container']}`}>
+            <Editor />
+          </div>
         </div>
-        <div className={styles['right-sidebar']}>
-          <Sidebar anchor="left" />
+
+        <div className={styles.column}>
+          <Sidebar anchor="right">
+            <div className={`${styles['right-sidebar']}`}>
+              <h1>Hello</h1>
+            </div>
+          </Sidebar>
         </div>
+
       </section>
-      <Button onClick={handleClick} variant="contained">Button</Button>
     </>
   )
 }

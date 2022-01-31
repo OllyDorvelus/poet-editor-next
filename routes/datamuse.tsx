@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { Phrase, IncomingPhraseFromRhymes, IncomingPhraseFromNyms } from '@/types/type';
-const API_URL = `${process.env.DATAMUSE_API_URL}/words?`;
+const API_URL = `https://api.datamuse.com/words?`;
 
 export async function getRhymes(phrase: String): Promise<Phrase[]> {
     try {
@@ -10,7 +10,6 @@ export async function getRhymes(phrase: String): Promise<Phrase[]> {
         return []
     }
 }
-
 
 async function getAntonyms(phrase: String): Promise<Phrase[]> {
     try {

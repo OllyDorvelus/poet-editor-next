@@ -3,21 +3,17 @@ import Drawer from '@mui/material/Drawer';
 import styles from '@/styles/Home.module.css'
 
 type Props = {
-
+    anchor?: "bottom" | "left" | "right" | "top" | undefined
+    variant?: "permanent" | "persistent" | "temporary" | undefined
 }
 
-export default function Sidebar({ }: Props): ReactElement {
+export default function Sidebar({ anchor = "right", variant = "permanent" }: Props): ReactElement {
     return (
         <div>
             <Drawer
-                anchor="right"
-                variant="permanent"
+                anchor={anchor}
+                variant={variant}
             >
-                <div className={styles['sidebar-container']}>
-                    <li>Something</li>
-                    <li>Something</li>
-                    <li>Something</li>
-                </div>
             </Drawer>
         </div>
     )

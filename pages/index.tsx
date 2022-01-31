@@ -23,12 +23,17 @@ const Home = (props: {}) => {
 
   return (
     <>
-      <div className={styles.container}>
+      <section className={styles.container}>
+        <div className={styles['left-sidebar']}>
+          <Sidebar anchor="left" />
+        </div>
         <div className={styles['editor-container']}>
           <Editor />
         </div>
-      </div>
-      <Sidebar />
+        <div className={styles['right-sidebar']}>
+          <Sidebar anchor="left" />
+        </div>
+      </section>
       <Button onClick={handleClick} variant="contained">Button</Button>
     </>
   )

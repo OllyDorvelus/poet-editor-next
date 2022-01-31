@@ -1,14 +1,15 @@
 import React, { ReactElement } from 'react'
+import Head from 'next/head';
 
 type Props = {
-
+  title: String,
 }
 
-export default function Layout({ }: Props): ReactElement {
+export default function Layout(props: Props): ReactElement {
   return (
-    <div>
-
-    </div>
+    <Head>
+      <title>{props.title}</title>
+    </Head>
   )
 }
 

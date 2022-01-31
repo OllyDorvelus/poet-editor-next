@@ -1,9 +1,11 @@
-import type { NextPage } from 'next'
+// import type { NextPage } from 'next'
 import React, { useState } from 'react';
-import type { Phrase } from '@/types/type'
+import { Phrase } from '@/types/type';
 import { getRhymes } from '@/routes/datamuse';
-import styles from '../styles/Home.module.css'
+import styles from '@/styles/Home.module.css'
 import Button from '@mui/material/Button';
+import Editor from '@/components/editor';
+import Sidebar from '@/components/sidebar';
 
 
 const Home = (props: {}) => {
@@ -20,13 +22,15 @@ const Home = (props: {}) => {
   }
 
   return (
-    <div className={styles.container}>
-      <h1>Poet Editor</h1>
-      {
-        // props.rhymes.map(phrase => (<h1 key={phrase.id}>{phrase.word}</h1>))
-      }
+    <>
+      <div className={styles.container}>
+        <div className={styles['editor-container']}>
+          <Editor />
+        </div>
+      </div>
+      <Sidebar />
       <Button onClick={handleClick} variant="contained">Button</Button>
-    </div>
+    </>
   )
 }
 

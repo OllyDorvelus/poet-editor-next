@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react'
+import TextField from '@mui/material/TextField';
 
 type Props = {
 
@@ -7,7 +8,11 @@ type Props = {
 export default function Editor({ }: Props): ReactElement {
     return (
         <div>
-            <h1>Editor</h1>
+            <TextField
+                multiline={true}
+                rows={50}
+                fullWidth={true}
+            />
         </div>
     )
 }

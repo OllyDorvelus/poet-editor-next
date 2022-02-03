@@ -1,12 +1,12 @@
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   margin-top: 20px;
 }
 
 .column {
   background: blue;
-  height: 100vh;
+  width: 30%;
 }
 
 /* .editor-container {

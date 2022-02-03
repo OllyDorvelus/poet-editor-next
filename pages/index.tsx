@@ -4,8 +4,8 @@ import { Phrase } from '@/types/type';
 import { getRhymes } from '@/routes/datamuse';
 import styles from '@/styles/Home.module.css'
 import Button from '@mui/material/Button';
-import Editor from '@/components/editor';
-import Sidebar from '@/components/sidebar';
+import Editor from '@/components/Editor';
+import Sidebar from '@/components/Sidebar';
 
 
 const Home = (props: {}) => {
@@ -25,17 +25,13 @@ const Home = (props: {}) => {
     <>
       <section className={styles.container}>
 
-        <div class={styles.column}>
-          <Sidebar anchor="left">
-            <div className={`${styles['left-sidebar']}`}>
-              <ul>
-                <li>Example 1</li>
-                <li>Example 2</li>
-                <li>Example 3</li>
-                <li>Example 4</li>
-              </ul>
-            </div>
-          </Sidebar>
+        <div className={styles.column}>
+          <ul>
+            <li>Example 1</li>
+            <li>Example 2</li>
+            <li>Example 3</li>
+            <li>Example 4</li>
+          </ul>
         </div>
 
         <div className={styles.column}>
@@ -45,11 +41,7 @@ const Home = (props: {}) => {
         </div>
 
         <div className={styles.column}>
-          <Sidebar anchor="right">
-            <div className={`${styles['right-sidebar']}`}>
-              <h1>Hello</h1>
-            </div>
-          </Sidebar>
+          <h1>Hello</h1>
         </div>
 
       </section>

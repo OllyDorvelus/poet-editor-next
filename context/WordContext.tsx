@@ -12,7 +12,11 @@ interface IWordContext {
 
 const defaultState = {
     rhymes: [],
+    synonyms: [],
+    antonyms: [],
     setRhymes: () => { },
+    setSynonyms: () => { },
+    setAntonyms: () => { },
 }
 
 type props = {

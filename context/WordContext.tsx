@@ -7,7 +7,7 @@ interface IWordContext {
     antonyms: Phrase[],
     setRhymes: Function;
     setSynonyms: Function,
-    setAntonyms: Phrase[],
+    setAntonyms: Function,
 }
 
 const defaultState = {

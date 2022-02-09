@@ -1,12 +1,15 @@
 import React from 'react';
 import Landing from '@/components/Landing';
+import { WordProvider } from '@/context/WordContext';
 
 type Props = {}
 
 const Home = ({ }: Props) => {
 
   return (
-    <Landing />
+    <WordProvider>
+      <Landing />
+    </WordProvider>
   )
 }
 

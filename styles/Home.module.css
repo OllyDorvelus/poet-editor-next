@@ -2,12 +2,13 @@
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
+  grid-gap: 100px;
 }
 
 .column {
-  width: 30%;
+  width: 100%;
 }
 
-/* .editor-container {
-  width: 30%;
-} */
+.column:nth-child(odd) {
+  background-color: gray;
+} 

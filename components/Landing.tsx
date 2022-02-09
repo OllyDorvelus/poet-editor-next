@@ -11,27 +11,40 @@ import Sidebar from '@/components/Sidebar';
 type Props = {}
 
 export default function Landing({ }: Props): ReactElement {
-  const { rhymes, setRhymes } = useContext(WordContext);
-  // const [synonyms, setSynonyms] = useState<Phrase[]>([])
-  // const [antonyms, setAntonyms] = useState<Phrase[]>([])
+  const { rhymes, synonyms, antonyms, setRhymes, setSynonyms, setAntonyms } = useContext(WordContext);
+  const wordArr = useState<String[]>([])
+  const wordText = useState<String>('');
 
   const handleClick = async (e: React.SyntheticEvent) => {
     e.preventDefault();
     const incomingRhymes = await getRhymes('fun');
     console.log('rhymes', incomingRhymes);
     setRhymes!(incomingRhymes);
-  }
+  };
+
+  const handleInputChange = (e: React.SyntheticEvent) => {
+
+  };
+
+  const onClickWord = (e: React.SyntheticEvent) => {
+
+  };
 
   return (
     <section className={styles.container}>
-      <button onClick={handleClick}>Test</button>
-      <h1>{rhymes.length}</h1>
 
+      <div className={styles.column}>
+
+      </div>
       <div className={styles.column}>
         <div className={`${styles['editor-container']}`}>
           <Editor />
         </div>
       </div>
+      <div className={styles.column}>
+
+      </div>
+
 
       {/* <div className={styles.column}>
           <h1>Hello</h1>

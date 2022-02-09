@@ -3,7 +3,11 @@ import { Phrase } from '@/types/type';
 
 interface IWordContext {
     rhymes: Phrase[];
+    synonyms: Phrase[],
+    antonyms: Phrase[],
     setRhymes: Function;
+    setSynonyms: Function,
+    setAntonyms: Phrase[],
 }
 
 const defaultState = {
@@ -25,7 +29,11 @@ export const WordProvider = ({ children }: props): JSX.Element => {
     return (
         <WordContext.Provider value={{
             rhymes,
-            setRhymes
+            synonyms,
+            antonyms,
+            setRhymes,
+            setSynonyms,
+            setAntonyms,
         }}>
             {children}
         </WordContext.Provider>

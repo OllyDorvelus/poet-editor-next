@@ -5,18 +5,9 @@
 }
 
 .column {
-  background: blue;
   width: 30%;
 }
 
 /* .editor-container {
   width: 30%;
 } */
-
-.right-sidebar {
-  background: green;
-}
-
-.left-sidebar {
-  background: red;
-} 

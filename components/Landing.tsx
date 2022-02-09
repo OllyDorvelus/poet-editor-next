@@ -22,8 +22,8 @@ export default function Landing({ }: Props): ReactElement {
     setRhymes!(incomingRhymes);
   };
 
-  const handleInputChange = (e: React.SyntheticEvent) => {
-
+  const handleChange = (e: React.BaseSyntheticEvent) => {
+    console.log(e.target.value)
   };
 
   const onClickWord = (e: React.SyntheticEvent) => {
@@ -38,7 +38,7 @@ export default function Landing({ }: Props): ReactElement {
       </div>
       <div className={styles.column}>
         <div className={`${styles['editor-container']}`}>
-          <Editor />
+          <Editor handleChange={handleChange} />
         </div>
       </div>
       <div className={styles.column}>

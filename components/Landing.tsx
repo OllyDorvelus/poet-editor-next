@@ -13,7 +13,7 @@ type Props = {}
 export default function Landing({ }: Props): ReactElement {
   const { rhymes, synonyms, antonyms, setRhymes, setSynonyms, setAntonyms } = useContext(WordContext);
   const wordArr = useState<String[]>([])
-  const wordText = useState<String>('');
+  const content = useState<String>('');
 
   const handleClick = async (e: React.SyntheticEvent) => {
     e.preventDefault();

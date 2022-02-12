@@ -12,8 +12,9 @@ type Props = {}
 
 export default function Landing({ }: Props): ReactElement {
   const { rhymes, synonyms, antonyms, setRhymes, setSynonyms, setAntonyms } = useContext(WordContext);
-  const wordArr = useState<String[]>([])
-  const content = useState<String>('');
+  const [wordArr, setWordArr] = useState<String[]>([])
+  const [content, setContent] = useState<String>('');
+  const wholeWordRegEx = RegExp(String.raw`\b\w+\b`, 'g')
 
   const handleClick = async (e: React.SyntheticEvent) => {
     e.preventDefault();
@@ -23,7 +24,9 @@ export default function Landing({ }: Props): ReactElement {
   };
 
   const handleChange = (e: React.BaseSyntheticEvent) => {
-    console.log(e.target.value)
+    const newContent = e.target.value;
+    setWordArr(newContent.match(wholeWordRegEx));
+    setContent(newContent);
   };
 
   const onClickWord = (e: React.SyntheticEvent) => {
@@ -44,11 +47,6 @@ export default function Landing({ }: Props): ReactElement {
       <div className={styles.column}>
 
       </div>
-
-
-      {/* <div className={styles.column}>
-          <h1>Hello</h1>
-        </div> */}
 
     </section>
   )

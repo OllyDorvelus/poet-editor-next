@@ -11,18 +11,18 @@ export async function getRhymes(phrase: String): Promise<Phrase[]> {
     }
 }
 
-async function getAntonyms(phrase: String): Promise<Phrase[]> {
+export async function getSynonyms(phrase: String): Promise<Phrase[]> {
     try {
-        const res = await axios.get<IncomingPhraseFromNyms[]>(`${API_URL}rel_ant=${phrase}`)
+        const res = await axios.get<IncomingPhraseFromNyms[]>(`${API_URL}rel_syn=${phrase}`)
         return res.data.map((incomingWord, idx) => ({ id: idx, word: incomingWord.word }))
     } catch (err) {
         return []
     }
 }
 
-async function getSynonyms(phrase: String): Promise<Phrase[]> {
+export async function getAntonyms(phrase: String): Promise<Phrase[]> {
     try {
-        const res = await axios.get<IncomingPhraseFromNyms[]>(`${API_URL}rel_syn=${phrase}`)
+        const res = await axios.get<IncomingPhraseFromNyms[]>(`${API_URL}rel_ant=${phrase}`)
         return res.data.map((incomingWord, idx) => ({ id: idx, word: incomingWord.word }))
     } catch (err) {
         return []
